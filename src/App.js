@@ -3,16 +3,15 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 import Row from './Row';
 import { requests, categoryComments } from './requests';
 import NetBan from './NetBan';
-import Nav from './Nav';
+import NavBar from './NavBar';
 import MovieDetails from './MovieDetails';
 
 function App() {
   return (
     <div className="app">
-      <Nav />
+      <NavBar />
       <BrowserRouter>
         <Switch>
-
           <Route exact path="/">
             <NetBan fetchUrl={requests.fetchNetflixOriginals} />
             <Row title="Released in the Past Year" fetchUrl={requests.fetchNetflixOriginals} categoryLink="/netflix_originals" categoryComment={categoryComments.netflixOriginalComments} isLargeRow />
