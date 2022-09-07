@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Row from './Row';
-import { requests, categoryComments } from './requests';
+import { cloneRequest, categoryComments } from './Clonerequest';
 import NetBan from './NetBan';
 import NavBar from './NavBar';
 import MovieDetails from './MovieDetails';
@@ -13,15 +13,15 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <NetBan fetchUrl={requests.fetchNetflixOriginals} />
-            <Row title="Released in the Past Year" fetchUrl={requests.fetchNetflixOriginals} categoryLink="/netflix_originals" categoryComment={categoryComments.netflixOriginalComments} isLargeRow />
-            <Row title="POpular on Netflix" fetchUrl={requests.fetchTrending} categoryLink="/trending" categoryComment={categoryComments.trendingComments} />
-            <Row title="Critically Acclaimed Films" fetchUrl={requests.fetchTopRated} categoryLink="/top_rated" categoryComment={categoryComments.topRatedComments} />
-            <Row title="New Releases" fetchUrl={requests.fetchActionMovies} categoryLink="/action" categoryComment={categoryComments.actionComments} />
-            <Row title="Action Movies" fetchUrl={requests.fetchComedyMovies} categoryLink="/comedy" categoryComment={categoryComments.comedyComments} />
-            <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} categoryLink="/horror" categoryComment={categoryComments.horrorComments} />
-            <Row title="Young Adult Movies" fetchUrl={requests.fetchfetchRomanceMovies} categoryLink="/romance" categoryComment={categoryComments.romanceComments} />
-            <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} categoryLink="/documentaries" categoryComment={categoryComments.documentaryComments} />
+            <NetBan fetchUrl={cloneRequest.fetchNetflixOriginals} />
+            <Row title="Released in the Past Year" fetchUrl={cloneRequest.fetchNetflixOriginals} categoryLink="/netflix_originals" categoryComment={categoryComments.netflixOriginalComments} isLargeRow />
+            <Row title="POpular on Netflix" fetchUrl={cloneRequest.fetchTrending} categoryLink="/trending" categoryComment={categoryComments.trendingComments} />
+            <Row title="Critically Acclaimed Films" fetchUrl={cloneRequest.fetchTopRated} categoryLink="/top_rated" categoryComment={categoryComments.topRatedComments} />
+            <Row title="New Releases" fetchUrl={cloneRequest.fetchActionMovies} categoryLink="/action" categoryComment={categoryComments.actionComments} />
+            <Row title="Action Movies" fetchUrl={cloneRequest.fetchComedyMovies} categoryLink="/comedy" categoryComment={categoryComments.comedyComments} />
+            <Row title="Horror Movies" fetchUrl={cloneRequest.fetchHorrorMovies} categoryLink="/horror" categoryComment={categoryComments.horrorComments} />
+            <Row title="Young Adult Movies" fetchUrl={cloneRequest.fetchfetchRomanceMovies} categoryLink="/romance" categoryComment={categoryComments.romanceComments} />
+            <Row title="Documentaries" fetchUrl={cloneRequest.fetchDocumentaries} categoryLink="/documentaries" categoryComment={categoryComments.documentaryComments} />
           </Route>
           <Route exact path="/netflix_originals/:id">
             <MovieDetails category={categoryComments.netflixOriginalComments} />

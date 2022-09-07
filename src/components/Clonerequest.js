@@ -1,4 +1,4 @@
-const requests = {
+const cloneRequest = {
     fetchTrending: `http://localhost:9292/trending`,
     fetchNetflixOriginals: `http://localhost:9292/netflix_originals`,
     fetchTopRated: `http://localhost:9292/top_rated`,
@@ -19,4 +19,4 @@ const categoryComments = {
     romanceComments: "/romance_comments",
     documentaryComments: "/documentary_comments"
 }
-export { requests, categoryComments }
+export { cloneRequest, categoryComments };
