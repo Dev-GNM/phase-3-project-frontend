@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Switch, Route } from "react-router-dom"
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Row from './Row';
 import { requests, categoryComments } from './requests';
 import NetBan from './NetBan';
