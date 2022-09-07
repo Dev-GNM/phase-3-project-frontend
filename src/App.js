@@ -14,7 +14,7 @@ function App() {
         <Switch>
 
           <Route exact path="/">
-            <Banner fetchUrl={requests.fetchNetflixOriginals} />
+            <NetBan fetchUrl={requests.fetchNetflixOriginals} />
             <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} categoryLink="/netflix_originals" categoryComment={categoryComments.netflixOriginalComments} isLargeRow />
             <Row title="Trending now" fetchUrl={requests.fetchTrending} categoryLink="/trending" categoryComment={categoryComments.trendingComments} />
             <Row title="Top Rated" fetchUrl={requests.fetchTopRated} categoryLink="/top_rated" categoryComment={categoryComments.topRatedComments} />
