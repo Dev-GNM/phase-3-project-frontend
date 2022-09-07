@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "./NetBan.css"
+
 function NetBan({ fetchUrl }) {
     const [movie, setMovie] = useState([])
     // const baseURL = "https://api.themoviedb.org/3"
@@ -10,7 +11,7 @@ function NetBan({ fetchUrl }) {
                 return data[Math.floor(Math.random() * data.length - 1)]
             }))
     }, [fetchUrl])
-    // console.log(movie)
+    
     function truncateString(str, num) {
         if (str?.length > num) {
             let subStr = str.substring(0, num);
