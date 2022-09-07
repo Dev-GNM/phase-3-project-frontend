@@ -11,7 +11,7 @@ function NetBan({ fetchUrl }) {
                 return data[Math.floor(Math.random() * data.length - 1)]
             }))
     }, [fetchUrl])
-    
+
     function truncateString(str, num) {
         if (str?.length > num) {
             let subStr = str.substring(0, num);
@@ -27,8 +27,8 @@ function NetBan({ fetchUrl }) {
                 backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
                 backgroundPosition: "center center",
             }}>
-            <div className="netban__contents">
-                <h1 className="netban__title">{movie?.title || movie?.name || movie?.original_name}</h1>
+            <div className="netban_contents">
+                <h1 className="netban_title">{movie?.title || movie?.name || movie?.original_name}</h1>
                 {/* <div className="banner__buttons">
                     <button className="banner__button">Play</button>
                     <button className="banner__button">My List</button>

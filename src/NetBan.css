@@ -1,6 +1,13 @@
 
-.banner{
+.netban{
     color:white;
     object-fit:contain;
     height:448px;
 }
+
+.netban_contents{
+    margin-left:30px;
+    padding-top:140px;
+    height:190px;
+}
+
